@@ -43,3 +43,7 @@ python train.py \
 ### Dataset format
 
 Standard COCO instance-segmentation format:
+
+## Reference
+
+K. Caballas, H. J. M. Bolingot, N. J. C. Libatique, and G. L. Tangonan, "Development of a Visual Guidance System for Laparoscopic Surgical Palpation using Computer Vision," 2020 IEEE EMBS Conference on Biomedical Engineering and Sciences (IECBES), 2021, doi: 10.1109/IECBES48179.2021.9398796.

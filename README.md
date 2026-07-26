@@ -14,7 +14,11 @@ Palpation — using touch to detect tissue anomalies like tumors or cysts — is
 - **Mask assembly:** final instance masks are produced by linearly combining prototypes with per-instance mask coefficients, then cropping to the predicted bounding box ("Lincomb" mask formulation)
 - **NMS:** Fast NMS (matrix-based, non-sequential) for efficient real-time inference
 
-## Repository structure
+## Data preparation
+
+1. Download CholecSeg8k from Kaggle: https://www.kaggle.com/datasets/newslab/cholecseg8k
+2. Convert the pixel-mask annotations to COCO instance-segmentation format (polygons + bounding boxes per organ/tool class), matching the schema described below.
+3. Split into `train/` and `val/` image + annotation sets.
 
 ## Installation
 

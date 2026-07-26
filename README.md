@@ -44,6 +44,17 @@ python train.py \
 
 `--num-classes` is the number of foreground classes (1 for gallbladder-only, as in the original paper; increase if segmenting additional organs or tools).
 
+## Notebook version
+
+For convenience, all modules (`model.py`, `loss.py`, `dataset.py`, `train.py`, `inference.py`) are also combined into a single Jupyter notebook, **`ORCAN_surgucal_AI.ipynb`**, so the full pipeline — model definition, loss functions, dataset loading, training loop, and inference — can be run end-to-end in one place (e.g. on Google Colab or Kaggle, where CholecSeg8k can be mounted directly).
+
+To use it:
+1. Open `ORCAN_surgucal_AI.ipynb` in Jupyter, Colab, or Kaggle Notebooks.
+2. Update the dataset paths in the data-loading cells to point to your converted CholecSeg8k COCO-format annotations.
+3. Run all cells in order — the notebook mirrors the same architecture, loss, and training logic as the standalone `.py` files in this repository.
+
+The standalone scripts remain the recommended entry point for larger training runs or integrating into a pipeline; the notebook is provided for quick experimentation and easier sharing.
+
 ## Demonstration Video
 
 Kindly consider this demonstration video explaining the results that can be obtained from this model.

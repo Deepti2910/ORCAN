@@ -15,3 +15,31 @@ Palpation — using touch to detect tissue anomalies like tumors or cysts — is
 - **NMS:** Fast NMS (matrix-based, non-sequential) for efficient real-time inference
 
 ## Repository structure
+
+## Installation
+
+```bash
+pip install torch torchvision pycocotools pillow numpy
+```
+
+## Usage
+
+### Sanity check
+```bash
+python model.py
+```
+Runs a forward pass on a dummy input and prints output tensor shapes.
+
+### Training
+```bash
+python train.py \
+    --train-images dataset/train/images --train-ann dataset/train/annotations.json \
+    --val-images   dataset/val/images   --val-ann   dataset/val/annotations.json \
+    --num-classes 1 --epochs 50 --batch-size 4 --img-size 550 --lr 1e-3
+```
+
+`--num-classes` is the number of foreground classes (1 for gallbladder-only, as in the original paper; increase if segmenting additional organs or tools).
+
+### Dataset format
+
+Standard COCO instance-segmentation format:
